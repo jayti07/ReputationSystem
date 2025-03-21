@@ -3,35 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('https://www.docsign.in/wp-content/uploads/2018/11/web-designer-pune-background.jpg');
+        }
+    </style>
     <title>Reputation System</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+
 </head>
 <body>
     <div class="container">
-        <h1>Blockchain Reputation System</h1>
-        <button id="connectWallet">Connect Wallet</button>
-        <p id="walletAddress">Not connected</p>
+        <header>
+            <h1>🔷 Reputation System 🔷</h1>
+            <button id="connectWallet">🚀 Connect Wallet</button>
+            <p id="walletAddress">Not connected</p>
+        </header>
         
-        <div class="controls">
-            <h2>Register User</h2>
-            <input type="text" id="registerAddress" placeholder="Enter Address">
-            <button onclick="registerUser()">Register</button>
-        </div>
-        
-        <div class="controls">
-            <h2>Update Reputation</h2>
-            <input type="text" id="updateAddress" placeholder="Enter Address">
-            <input type="number" id="newReputation" placeholder="New Reputation">
-            <button onclick="updateReputation()">Update</button>
-        </div>
-        
-        <div class="controls">
-            <h2>Get Reputation</h2>
-            <input type="text" id="getAddress" placeholder="Enter Address">
-            <button onclick="getReputation()">Fetch</button>
-            <p id="reputationResult"></p>
-        </div>
+        <main>
+            <section class="card">
+                <h2>🔹 Register User</h2>
+                <input type="text" id="registerAddress" placeholder="Enter Address">
+                <button onclick="registerUser()">📝 Register</button>
+            </section>
+            
+            <section class="card">
+                <h2>⚡ Update Reputation</h2>
+                <input type="text" id="updateAddress" placeholder="Enter Address">
+                <input type="number" id="newReputation" placeholder="New Reputation">
+                <button onclick="updateReputation()">🔄 Update</button>
+            </section>
+            
+            <section class="card">
+                <h2>🔍 Get Reputation</h2>
+                <input type="text" id="getAddress" placeholder="Enter Address">
+                <button onclick="getReputation()">🎯 Fetch</button>
+                <p id="reputationResult"></p>
+            </section>
+        </main>
     </div>
 </body>
 </html>
