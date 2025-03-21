@@ -1,46 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
     max-width: 500px;
-    margin: 50px auto;
     padding: 20px;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 1s ease-in-out;
 }
 
-h1, h2 {
-    color: #333;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.controls {
-    margin: 20px 0;
-}
-
-input {
-    padding: 10px;
-    width: 80%;
-    margin: 10px 0;
+header h1 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+    padding: 12px 18px;
+    margin: 12px;
     border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff7e5f, #ff3b30);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #ff3b30, #c62828);
+    transform: scale(1.08);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    width: 85%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
 }
 
 #reputationResult {
     font-weight: bold;
-    margin-top: 10px;
+    font-size: 20px;
+    margin-top: 12px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
